@@ -1,20 +1,37 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Sheraa Application
 
-# Run and deploy your AI Studio app
+مشروع تطبيق إعلانات مبوبة مع نظام ولاء.
 
-This contains everything you need to run your app locally.
+## خطوات النشر على GitHub Pages
 
-View your app in AI Studio: https://ai.studio/apps/drive/1JPVEhxJ2KvMfOcK0iSTFJMP3QEpj7hwe
+لرفع التعديلات ونشر الموقع، اتبع الخطوات التالية في التيرمينال:
 
-## Run Locally
+1. **تثبيت الحزم (مرة واحدة)**
+   ```bash
+   npm install
+   ```
 
-**Prerequisites:**  Node.js
+2. **بناء المشروع (Build)**
+   يقوم هذا الأمر بإنشاء مجلد `dist` جاهز للنشر.
+   ```bash
+   npm run build
+   ```
 
+3. **النشر (Deploy)**
+   *(ملاحظة: تأكد من تثبيت `gh-pages` أو استخدام GitHub Actions للنشر التلقائي)*
+   ```bash
+   npm run deploy
+   ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## إعدادات GitHub Repository
+
+لضمان ظهور الموقع:
+1. اذهب إلى **Settings** في مستودع GitHub.
+2. اختر **Pages** من القائمة الجانبية.
+3. تحت **Build and deployment**:
+   - تأكد من اختيار الفرع: `gh-pages` (أو `main` إذا كنت تستخدم GitHub Actions).
+   - المجلد: `root` (أو `/`).
+
+## ملاحظات هامة
+- تم ضبط `base` في `vite.config.ts` ليكون `/sheraa/`.
+- جميع المسارات في الكود يجب أن تكون نسبية (مثل `./assets/image.png`).
