@@ -4,8 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // تم تحديث المسار ليطابق اسم المستودع الخاص بك كما يظهر في الرابط
-  base: '/sheraa/', 
+  // لأن رابطك: https://mohammedalqarni1.github.io/sheraa/
+  base: '/sheraa/',
   build: {
     outDir: 'dist',
   }
